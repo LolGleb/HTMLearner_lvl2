@@ -1,9 +1,9 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 
-//преобразование scss в css
+//преобразование sass в css
 gulp.task("sass", function () {
-    gulp.src("sass/style") //что хватаем
-        .pipe(sass())  //преобразование
+    return gulp.src("sass/style.sass") //что хватаем
+        .pipe(sass().on('error', sass.logError))  //преобразование
         .pipe(gulp.dest("css"));  //в какую папку выкидываем
 });
