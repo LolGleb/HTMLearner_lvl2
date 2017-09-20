@@ -13,7 +13,7 @@
   width: 100%
   height: 320px
 
-@media ($tablet-widths)
+@media #{$tablet-widths}
 
   .stats
     position: relative
@@ -33,7 +33,7 @@
 
     display: block
 
-@media ($desktop-widths)
+@media #{$desktop-widths}
 
   .stats
     @include clearfix

@@ -9,10 +9,10 @@
   width: 320px
   margin: 0 auto
 
-  @media ($tablet-widths)
+  @media #{$tablet-widths}
     width: 640px
 
-  @media ($desktop-widths)
+  @media #{$desktop-widths}
     width: 960px
 
 @mixin mock ($height: 100px, $bg: rgba(255, 255, 255, 0.10), $wavesOpacity: 0.5)
