@@ -127,7 +127,6 @@
     height: 16px
     
     background-image: url("../img/icon-login.png")
-    background-position: -10px -82px
     opacity: 0.3
 
 @media #{$mobile-widths-only}
@@ -304,11 +303,9 @@
       left: 12px
 
     &:hover::before
-      background-position: -10px -46px
       opacity: 1
 
     &:active::before
-      background-position: -10px -82px
       opacity: 0.3
 
 @media #{$desktop-widths}
@@ -316,5 +313,61 @@
   .main-nav__items
     width: 780px
 
+  .main-nav__item
+    margin-right: 0
+
+    &--active::after
+      right: 30px
+      left: 30px
+
+  .main-nav__item a
+    padding-right: 31px
+    padding-left: 31px
+
+  .main-nav__item a[href]
+    &:hover
+      color: #000000
+
+      background-color: #ffffff
+
+    &:active
+      color: rgba(0, 0, 0, 0.3)
+
+      background-color: #ffffff
+      opacity: 1
+
   .main-nav__user-items
-    width: 160px
+    width: auto
+    max-width: 160px
+
+  .main-nav__user-login
+    position: relative
+
+    width: auto
+    height: auto
+    padding-top: 25px
+    padding-right: 30px
+    padding-bottom: 23px
+    padding-left: 50px
+
+    font-weight: bold
+    font-size: 18px
+    line-height: 24px
+    text-transform: uppercase
+    text-decoration: none
+
+    &:hover
+      color: #000000
+
+      background-color: #ffffff
+
+    &:active
+      color: rgba(0, 0, 0, 0.3)
+
+      background-color: #ffffff
+
+    &:active::before
+      opacity: 0.1
+
+  .main-nav__user-login::before
+    left: 15px
