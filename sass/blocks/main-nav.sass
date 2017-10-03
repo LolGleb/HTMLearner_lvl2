@@ -1,9 +1,9 @@
 .main-nav
   position: relative
 
-  width: 320px
+  width: auto
   min-height: 50px
-  margin: 0 auto
+  //margin: 0 auto
 
   background-color: #826550
 
@@ -190,29 +190,6 @@
 
     background-color: #6a4d38
 
-@media #{$tablet-widths}
-  .main-nav
-    width: auto
-    min-height: 70px
-    margin: 0
-
-  .main-nav__wrapper
-    width: 320px
-    margin: 0 auto
-
-  .main-nav__wrapper::after
-    content: ""
-    display: table
-    clear: both
-
-  .main-nav__items
-    float: left
-    width: 570px
-
-  .main-nav__user-items
-    float: right
-    width: 60px
-
 @media #{$tablet-widths} and #{$tablet-widths}
   .main-nav__wrapper
     width: 640px
@@ -238,18 +215,25 @@
     background-color: black
 
   .main-nav__wrapper
-    @include container
-    @include clearfix
+    @include container-fluid
+    //@include clearfix
+
+    display: flex
+    justify-content: space-between
 
   .main-nav__toggle
     display: none
 
   .main-nav__items
-    float: left
-    width: 570px
+    //float: left
+    //width: 570px
+    display: flex
+    flex-wrap: wrap
+    flex-grow: 1
+    justify-content: space-between
 
   .main-nav__user-items
-    float: right
+    //float: right
     width: 60px
 
   .main-nav__item
@@ -311,7 +295,7 @@
 @media #{$desktop-widths}
 
   .main-nav__items
-    width: 780px
+    //width: 780px
 
   .main-nav__item
     margin-right: 0
